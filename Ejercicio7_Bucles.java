@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
- */
 package com.politecnicomalaga.ejercicios_bucles;
 
 /**
@@ -36,6 +32,7 @@ public class Ejercicio7_Bucles {
         //N0 SE PUEDEN PONER CARÁCTERES ESPECIALES
         String password = "0000";
         String newpassword;
+        boolean exit = false;
 
         //Lo que hay dentro de los paréntesis es un objeto porque es String
         //Mensaje, objeto, parámetro, función.
@@ -46,6 +43,7 @@ public class Ejercicio7_Bucles {
         //Cuando los paréntesis están vacíos, significa que el objeto ya tiene la información.
         int opcion = entrada.nextInt();
 
+        do {
         switch (opcion) {
             case 1:
                 System.out.println("Has seleccionado la primera opción, ingresa la contraseña actual: ");
@@ -82,12 +80,14 @@ public class Ejercicio7_Bucles {
                             }
                     break;
              
-            case 3:
+            case 0:
                 System.out.println("Sayonara baby");
+                exit = true;
                 break;
 
         }
-
+         
+        }while (exit == false);
     }
 
 }
